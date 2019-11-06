@@ -44,10 +44,9 @@ describe('Applitools Hackathon tests - Traditional', () => {
 			cy.eyesCheckWindow('Amount sorted by ascending order')
 		})
 
-		it.only('should display a graph that compares expenses across years', () => {
-			//Explicit waits are undesirable, but necessary due to the animation time of the charting library
+		it('should display a graph that compares expenses across years', () => {
 			cy.get('#showExpensesChart').click()
-			cy.wait(2000)
+			cy.wait(2000) //Explicit waits are undesirable, but necessary due to the animation time of the charting library
 			cy.eyesCheckWindow('Initial chart')
 			cy.get('#addDataset').click()
 			cy.wait(2000)
