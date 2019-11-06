@@ -8,7 +8,7 @@ export const loginInputs = [
 		description: 'no username or password',
 		username: '',
 		password: '',
-		error: 'Both Username and Password must be present',
+		error: 'Please enter both username and password',
 		result: 'fail',
 	},
 	{

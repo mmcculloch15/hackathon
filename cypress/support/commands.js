@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 import { validUser } from './testData'
+import '@testing-library/cypress/add-commands'
 
 Cypress.Commands.add('login', () => {
 	cy.get('#username').type(validUser.username)
