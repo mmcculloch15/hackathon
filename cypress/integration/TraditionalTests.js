@@ -6,8 +6,10 @@ describe('Applitools Hackathon tests', () => {
 	})
 
 	it('Should display all login page UI elements', () => {
-		cy.get('#username').should('be.visible')
-		cy.get('#password').should('be.visible')
+		cy.findByPlaceholderText('Enter your username').should('be.visible')
+		cy.get('label:contains(Username)').should('be.visible')
+		cy.findByPlaceholderText('Enter your password').should('be.visible')
+		cy.get('label:contains(Password)').should('be.visible')
 		cy.get('#log-in').should('be.visible')
 		cy.get('.form-check-input').should('be.visible')
 		cy.get('.os-icon-fingerprint').should('be.visible')
