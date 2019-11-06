@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test:open": "./node_modules/.bin/cypress open",
-    "test": "./node_modules/.bin/cypress"
+    "test": "./node_modules/.bin/cypress run"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@applitools/eyes-cypress": "^3.8.18",
+    "@testing-library/cypress": "^5.0.2",
     "cypress": "^3.6.0"
   }
 }

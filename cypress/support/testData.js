@@ -8,7 +8,7 @@ export const loginInputs = [
 		description: 'no username or password',
 		username: '',
 		password: '',
-		error: 'Both Username and Password must be present',
+		error: 'Please enter both username and password',
 		result: 'fail',
 	},
 	{
@@ -29,3 +29,5 @@ export const loginInputs = [
 		...validUser,
 	},
 ]
+
+export const baseUrl = 'https://demo.applitools.com/hackathonV2.html'
