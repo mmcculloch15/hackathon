@@ -29,3 +29,5 @@ export const loginInputs = [
 		...validUser,
 	},
 ]
+
+export const baseUrl = 'https://demo.applitools.com/hackathon.html'
