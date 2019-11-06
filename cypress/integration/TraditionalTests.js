@@ -1,8 +1,8 @@
-import { loginInputs, validUser } from '../support/testData'
+import { loginInputs, validUser, baseUrl } from '../support/testData'
 
 describe('Applitools Hackathon tests', () => {
 	beforeEach(() => {
-		cy.visit('https://demo.applitools.com/hackathonV2.html')
+		cy.visit(baseUrl)
 	})
 
 	it('Should display all login page UI elements', () => {
@@ -68,7 +68,7 @@ describe('Applitools Hackathon tests', () => {
 	})
 
 	it('Should display an advertisement when showAd parameter is present in the URL', () => {
-		cy.visit('https://demo.applitools.com/hackathonV2.html?showAd=true')
+		cy.visit(`${baseUrl}?showAd=true`)
 		cy.login()
 		//It's not possible to determine that this element is not displaying correctly, and a visual test would help catch this error
 		cy.get('#flashSale').should('be.visible')

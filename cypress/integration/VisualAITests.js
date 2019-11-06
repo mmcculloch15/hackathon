@@ -1,8 +1,8 @@
-import { loginInputs, validUser } from '../support/testData'
+import { loginInputs, validUser, baseUrl } from '../support/testData'
 
 describe('Applitools Hackathon tests - Traditional', () => {
 	beforeEach(() => {
-		cy.visit('https://demo.applitools.com/hackathonV2.html')
+		cy.visit(baseUrl)
 		cy.eyesOpen({
 			appName: 'Applitools Hackathon App',
 			batchName: 'Hackathon',
@@ -27,7 +27,7 @@ describe('Applitools Hackathon tests - Traditional', () => {
 	})
 
 	it('Should display an advertisement when showAd parameter is present in the URL when login occurs', () => {
-		cy.visit('https://demo.applitools.com/hackathonV2.html?showAd=true')
+		cy.visit(`${baseUrl}?showAd=true`)
 		cy.login()
 		cy.eyesCheckWindow('Advertisements on the dashboard')
 	})
