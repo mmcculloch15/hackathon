@@ -19,8 +19,6 @@ describe('Applitools Hackathon tests - Traditional', () => {
 
 	loginInputs.map(input => {
 		it(`Login form submission should ${input.result} when ${input.description} is entered and the form is submitted`, () => {
-			cy.get('#username').clear()
-			cy.get('#password').clear()
 			if (input.username) cy.get('#username').type(input.username)
 			if (input.password) cy.get('#password').type(input.password)
 			cy.get('#log-in').click()
