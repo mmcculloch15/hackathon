@@ -19,6 +19,6 @@ When running the tests, you should see that the functional tests (in `./cypress/
 
 I've also added comments to the test files where appropriate, to note some limitations with the functional tests for the required scenarios.
 
-### Running on V1
+### Running on V1 of the demo application
 
 You can also switch the `baseUrl` in `./support/testData.js` if you would like to run the tests against the V1 demo application
